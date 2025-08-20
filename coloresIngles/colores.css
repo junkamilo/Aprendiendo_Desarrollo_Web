@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    background: #f0f0f0;
+}
+.content_color{
+    width: 20%;
+    height: 40vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+.Red{
+    background: red;
+}
+.Blue{
+    background: blue;
+}
+.Green{
+    background: green;
+}
+.Yellow{
+    background: yellow;
+}
+.Black{
+    background: black;
+}
+.White{
+    background: white;
+}
+.Pink{
+    background: pink;
+}
+.Orange{
+    background: orange;
+}
+.Purple{
+    background: purple;
+}
+.Brown{
+    background: brown;
+}
+.Gray{
+    background: gray;
+}
+
+.Gold{
+    background: rgb(179, 161, 0);
+}
