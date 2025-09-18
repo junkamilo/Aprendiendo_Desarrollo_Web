@@ -1,0 +1,17 @@
+.btn-primary {
+    background-color: #ff0000;
+    border-color: #cc0000;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #cc0000; /* Ejemplo: Rojo oscuro */
+    border-color: #990000;
+}
+
+.btn-primary:active,
+.btn-primary:focus {
+    background-color: #990000 !important;
+    border-color: #660000 !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 0, 0, 0.5) !important;
+}

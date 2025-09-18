@@ -1,0 +1,13 @@
+.container-fluid{
+    border: 1px solid black;
+}
+.row{
+    border: 1px solid black;
+}
+.col{
+    border: 1px solid black;
+}
+.sidebar{
+    height: 100dvh;
+    border: 1px solid black;
+}

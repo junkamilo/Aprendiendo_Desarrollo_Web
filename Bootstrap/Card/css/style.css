@@ -1,0 +1,15 @@
+@import url(/Bootstrap/Card/css/boton.css);
+@import url(/Bootstrap/Card/css/card.css);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
