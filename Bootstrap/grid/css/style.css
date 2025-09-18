@@ -16,7 +16,7 @@ body {
 }
 .custom-navbar {
     background-color: #0a1930; 
-    height: 8vh;
+    height: auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 0 -2px 5px rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
@@ -52,7 +52,7 @@ body {
 
 .aside {
     background-color: #e9ecef; 
-    height: 72vh;
+    height: auto;
     padding: 20px;
     color: #495057;
     text-align: left !important;
@@ -67,7 +67,7 @@ body {
     overflow-y: auto;
 }
 .custom-card-style {
-    height: 65vh; 
+    height: auto; 
     border: none;
     border-radius: 12px;
     background-color: #ffffff;
