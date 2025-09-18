@@ -1,13 +1,113 @@
-.container-fluid{
-    border: 1px solid black;
+/* 1. Reset Básico (Mantener) */
+body {
+    height: 100vh; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
 }
-.row{
-    border: 1px solid black;
+.header {
+    background-color: #212529; /* Gris oscuro */
+    color: white;
+    height: 10vh;
+    padding: 20px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
-.col{
-    border: 1px solid black;
+.custom-navbar {
+    background-color: #0a1930; 
+    height: 8vh;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 0 -2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
 }
-.sidebar{
-    height: 100dvh;
-    border: 1px solid black;
+
+.nav-item .nav-link {
+    color: #ffffff;
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.nav-item .nav-link[aria-current="page"] {
+    color: #00bcd4 !important;
+    border: 2px solid #00bcd4;
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.8);
+}
+
+.nav-item .nav-link:hover {
+    color: #0a1930;
+    background-color: #00bcd4;
+    border-radius: 8px;
+    box-shadow: 
+        0 4px 15px rgba(0, 188, 212, 0.6),
+        0 0 5px rgba(255, 255, 255, 0.8) inset;
+    transform: translateY(-2px);
+    border-color: #00bcd4 !important; 
+}
+
+.aside {
+    background-color: #e9ecef; 
+    height: 72vh;
+    padding: 20px;
+    color: #495057;
+    text-align: left !important;
+}
+
+.main {
+    background-color: white; 
+    height: 72vh;
+    padding: 30px;
+    color: #212529;
+    text-align: left !important;
+    overflow-y: auto;
+}
+.custom-card-style {
+    height: 65vh; 
+    border: none;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.1), 
+        0 6px 6px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(10, 25, 48, 0.1); 
+    
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden; 
+}
+
+.custom-card-style:hover {
+    transform: translateY(-5px); 
+    box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.2), 
+        0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.custom-card-style .img-fluid.h-100 {
+    object-fit: cover; 
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.custom-title-style {
+    color: #0a1930; 
+    font-weight: 700;
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+
+.footer {
+    background-color: #212529; 
+    color: rgba(255, 255, 255, 0.7);
+    height: 10vh;
+    line-height: 10vh;
+    font-size: 0.8rem;
 }
