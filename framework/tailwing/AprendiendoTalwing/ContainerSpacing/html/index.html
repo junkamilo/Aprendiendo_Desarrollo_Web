@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Container and Spacing</title>
+  </head>
+  <body>
+    <!--Container-->
+    <!--margin and padding-->
+    <div class="container-md bg-orange-500 text-white mx-auto">
+      <article class="border border-blue-500 px-10 py-10">
+        <h3 class="border border-black mb-5">Titulo</h3>
+        <p class="border border-black px-[2rem] py-[2rem]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          quod quibusdam optio aperiam repellendus iste? Natus praesentium
+          exercitationem laudantium. Molestias suscipit, corporis fuga quos
+          optio similique rerum quia perspiciatis. Numquam.
+        </p>
+      </article>
+    </div>
+
+    <br>
+    <!--space between X-->
+        <div class="bg-orange-500 px-[2rem] py-[2rem] flex space-x-10">
+            <div>item 1</div>
+            <div>item 2</div>
+            <div>item 3</div>
+            <div>item 4</div>
+            <div>item 5</div>
+            <div>item 6</div>
+            <div>item 7</div>
+            <div>item 8</div>
+        </div>
+    
+        <br>
+    <!--space between y-->
+    <div class="bg-orange-500 px-[2rem] py-[2rem] flex flex-col space-y-10">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+        <div>item 4</div>
+        <div>item 5</div>
+        <div>item 6</div>
+        <div>item 7</div>
+        <div>item 8</div>
+    </div>
+    
+  </body>
+</html>
+
+<!-- Breakpoinsts for Container 
+    container	None	width: 100%;
+    sm (640px)	    max-width: 640px;
+    md (768px)	    max-width: 768px;
+    lg (1024px)	    max-width: 1024px;
+    xl (1280px)	    max-width: 1280px;
+    2xl (1536px)	  max-width: 1536px; 
+-->
+
+<!-- margin
+m-0	margin: 0px;
+mx-0	margin-left: 0px , margin-right: 0px;
+my-0	margin-top: 0px , margin-bottom: 0px;
+mt-0	margin-top: 0px;
+mr-0	margin-right: 0px;
+mb-0	margin-bottom: 0px;
+ml-0	margin-left: 0px;
+-->
+
+<!--padding
+p-0	padding: 0px;
+px-0	padding-left: 0px, padding-right: 0px;
+py-0	padding-top: 0px , padding-bottom: 0px;
+pt-0	padding-top: 0px;
+pr-0	padding-right: 0px;
+pb-0	padding-bottom: 0px;
+pl-0	padding-left: 0px;
+-->

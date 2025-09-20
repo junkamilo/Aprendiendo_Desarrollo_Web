@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Sizing</title>
+</head>
+
+<body>
+    <!--width-->
+    <div class="bg-black text-white border-white w-100 text-center mt-5 ml-auto mr-auto">
+        width
+    </div>
+
+    <!--porcentages-->
+    <div class="bg-black text-white border-white w-1/2 text-center mt-5 ml-auto mr-auto">
+        porcentages
+    </div>
+
+    <!--width of the viewport-->
+    <div class="bg-black text-white border-white w-screen text-center mt-5 ml-auto mr-auto">
+        viewport
+    </div>
+
+    <!--100% of container-->
+    <div class="bg-black text-white border-white w-full text-center mt-5 ml-auto mr-auto">
+        100% of container
+    </div>
+
+    <!--Arbitrary width-->
+    <div class="bg-black text-white border-white w-[300px] text-center mt-5 ml-auto mr-auto">
+        Arbitrary width 300px
+    </div>
+
+    <!--Max width-->
+    <div class="bg-black text-white border-white max-w-sm text-center mt-5 ml-auto mr-auto">
+        Max width
+    </div>
+
+    <br>
+    <!--height-->
+    <div class="flex items-end w-full border border-black-500">
+        <div class="bg-blue-500 w-20 h-20">Hello</div>
+        <div class="bg-blue-500 w-20 h-40">Hello</div>
+        <div class="bg-blue-500 w-20 h-60">Hello</div>
+        <div class="bg-blue-500 w-20 h-80">Hello</div>
+        <div class="bg-blue-500 w-20 h-100">Hello</div>
+    </div>
+
+    <!--height full screend-->
+    <div class="bg-orange-500 h-screen">hello</div>
+</body>
+
+</html>
