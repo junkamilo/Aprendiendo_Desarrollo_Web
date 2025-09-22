@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/framework/Bootstrap/AprendiendoBoostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/framework/Bootstrap/AprendiendoBoostrap/grid2/css/utilidades.css">
+    <title>Utilidades</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <!--Ordenamos los elementos con order y con diseño responsive donde cuando sea menor a 576px los elementos cambian de orden-->
+            <div class="columna col order-4 order-sm-1">Columna 1</div>
+            <div class="columna col order-3 order-sm-2">Columna 2</div>
+            <div class="columna col order-2 order-sm-3">Columna 3</div>
+            <div class="columna col order-1 order-sm-4">Columna 4</div>
+        </div>
+        <div class="row">
+            <!--con offset corremos hacia la izquierda tres columnas y tambien incluye diseño responsivo-->
+            <div class="columna col-3 offset-3 offset-sm-6">Columna 1</div>
+        </div>
+        <div class="row">
+            <!--con offset corremos hacia la izquierda tres columnas y tambien incluye diseño responsivo-->
+            <div class="columna col-3 offset-1 offset-sm-3">Columna 1</div>
+            <div class="columna col-3 offset-1 offset-sm-3">Columna 1</div>
+        </div>
+        <div class="row justify-content-between">
+            <!--columnas con auto y se agranda dependiendo del tamaño del contenido-->
+            <div class="columna col-auto">esta columna esta en auto y se agranda dependiendo del texto</div>
+            <div class="columna col-auto">esta columna tambien tiene auto</div>
+        </div>
+    </div>
+</body>
+
+</html>

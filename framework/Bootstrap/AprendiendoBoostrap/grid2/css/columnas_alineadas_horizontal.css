@@ -1,8 +1,12 @@
 .container{
     border:1px solid black;
+    margin-bottom: 10px;
+    background-color: rgb(212, 212, 212);
+    height: auto;
 }
 .row{
     border: 1px solid black;
+    height: 200px;
 }
 .columna{
     border: 1px solid black;
