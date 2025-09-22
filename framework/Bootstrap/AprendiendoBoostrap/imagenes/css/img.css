@@ -1,0 +1,17 @@
+.container{
+    border:1px solid black;
+    background-color: rgb(212, 212, 212);
+    height: auto;
+}
+.row{
+    border: 1px solid black;
+}
+.columna{
+    border: 1px solid black;
+    background-color: gray;
+    padding: 10px;
+    text-align: center;
+}
+.contenido{
+    border: 1px solid black;
+}
