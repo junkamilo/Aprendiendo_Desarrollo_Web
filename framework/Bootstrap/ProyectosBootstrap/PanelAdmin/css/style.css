@@ -1,0 +1,243 @@
+/* Paleta de colores y variables */
+:root {
+    --bg-dark: #1F2937;
+    --sidebar-color: #171E28;
+    --main-content-color: #2F3B4B;
+    --accent-primary: #10B981; /* Verde Vibrante */
+    --accent-secondary: #0694a5;
+    --text-light: #D1D5DB;
+    --text-muted: #6B7280;
+    --border-color: #374151;
+    --primary-color: #0F1E3A; /* Azul Oscuro */
+    --accent-primary: #00C2C7; /* Turquesa */
+    --accent-secondary: #FF7C68; /* Coral */
+    --text-light: #F0F4F8; /* Gris Cálido */
+    --bg-card: #1F2937;
+    --border-card: #374151;
+}
+
+body {
+    background-color: var(--bg-dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-light);
+}
+
+/* ------------------- Layout Principal ------------------- */
+.main-layout {
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+}
+
+.row.vh-100 {
+    min-height: 100vh;
+}
+
+/* ------------------- Sidebar ------------------- */
+.sidebar {
+    background-color: var(--sidebar-color);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-link {
+    color: var(--text-light);
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--accent-primary) !important;
+}
+
+.sidebar .nav-link.active {
+    background-color: var(--accent-primary);
+    color: white !important;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+}
+
+.sidebar-divider {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu-dark {
+    background-color: var(--sidebar-color);
+    border-color: var(--border-color);
+}
+
+/* ------------------- Contenido Principal (Main) ------------------- */
+.main-content {
+    background-color: var(--main-content-color);
+    overflow-y: auto;
+}
+
+.main-content h1 {
+    color: var(--text-light);
+    font-weight: 700;
+}
+
+/* ------------------- Cards de Noticias ------------------- */
+.card-custom {
+    background-color: var(--sidebar-color);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    color: var(--text-light);
+    transition: all 0.3s ease;
+}
+.card-custom:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+    transform: translateY(-5px);
+}
+
+.text-accent-primary {
+    color: var(--accent-primary) !important;
+    font-weight: bold;
+}
+.content_card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: justify;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease-in-out;
+    gap: 1rem;
+}
+
+/* Efecto Hover en la Card */
+.content_card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+/* Estilo del Contenedor del Logo */
+.card-logo {
+    width: auto;
+    height: auto;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    border: 3px solid var(--accent-primary);
+    overflow: hidden;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Efecto Hover en el Logo */
+.content_card:hover .card-logo {
+    border-color: var(--accent-secondary);
+}
+
+/* Estilo de la Imagen del Logo */
+.card-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo del Cuerpo de la Card */
+.card-body {
+    padding: 0;
+    border: none;
+}
+
+/* Títulos y Subtítulos */
+.card-title {
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.card-subtitle {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Texto de la Descripción */
+.card-text {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Estilo de los Botones */
+.btn-custom {
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 50px;
+    margin: 0.25rem;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+/* Se elimina la clase .content_items */
+
+/* ------------------- Formulario ------------------- */
+.form-control-custom {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+    transition: all 0.3s ease;
+}
+
+.form-control-custom::placeholder {
+    color: var(--text-muted);
+}
+
+.form-control-custom:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.25);
+    color: var(--text-light);
+}
+
+.form-check-input {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.form-check-input:checked {
+    background-color: var(--accent-primary);
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.25);
+}
+
+.form-check-label {
+    color: var(--text-light);
+}
+
+/* ------------------- Botones ------------------- */
+
+
+/* ------------------- Responsividad ------------------- */
+@media (max-width: 768px) {
+    .main-layout .row {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    .main-content {
+        padding-top: 2rem !important;
+    }
+    .sidebar .nav-link {
+        font-size: 0.9rem;
+    }
+    .sidebar .fs-5 {
+        font-size: 1.25rem !important;
+    }
+    .main-content h1 {
+        font-size: 2rem;
+    }
+}
+
