@@ -1,0 +1,385 @@
+/* ------------------- Paleta de Colores y Tipografía ------------------- */
+:root {
+    --bg-dark: #121212;
+    --bg-light: #202020;
+    --primary-accent: #65d4bb;
+    --secondary-accent: #f29f67;
+    --text-color: #e0e0e0;
+    --text-muted: #808080;
+    --shadow-soft: 0 4px 15px rgba(0, 0, 0, 0.2);
+    --border-subtle: 1px solid rgba(255, 255, 255, 0.1);
+     --bg-dark: #121212;
+    --bg-card: #282A3A;
+    --primary-accent: #6C63FF;
+    --secondary-accent: #FF5A5F;
+    --tertiary-accent: #00EAD3;
+}
+
+body {
+    background-color: var(--bg-dark);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    box-sizing: border-box;
+}
+
+.content-section {
+    min-height: 80vh;
+}
+/* ------------------- Header ------------------- */
+.header-custom {
+    background: var(--bg-card);
+    border-bottom: 2px solid rgba(108, 99, 255, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.content-buscador {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--bg-dark);
+    padding: 0.25rem;
+    width: clamp(200px, 20vw, 300px);
+    transition: all 0.3s ease;
+}
+
+.content-buscador:focus-within {
+    box-shadow: 0 0 15px var(--primary-accent);
+}
+
+.item-logo {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.apple-logo {
+    color: var(--primary-accent);
+}
+
+.item-buscador {
+    flex-grow: 1;
+    padding: 0 0.5rem;
+}
+
+.form-search {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    padding-left: 2rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.form-search::placeholder {
+    color: var(--text-muted);
+}
+
+.form-search:focus {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    color: var(--text-color);
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.75rem;
+    color: var(--text-muted);
+    z-index: 10;
+}
+
+.btn-outline-success {
+    display: none; /* Ocultar el botón de búsqueda para un diseño más minimalista */
+}
+
+/* ------------------- Menú de Navegación ------------------- */
+.content_menu {
+    border: none;
+    width: 50rem;
+}
+.nav-link-custom {
+    color: var(--text-muted);
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+    color: var(--tertiary-accent);
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 5px var(--tertiary-accent));
+}
+
+.nav-pills .nav-link-custom.active {
+    background-color: transparent;
+}
+
+/* ------------------- Perfil y Botones de Acción ------------------- */
+.logo_perfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--primary-accent);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px var(--primary-accent);
+    display: flex; /* Para centrar la imagen */
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-logo-frame {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.profile-logo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo_perfil:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--secondary-accent);
+    border-color: var(--secondary-accent);
+}
+
+.btn-cta {
+    background: linear-gradient(45deg, var(--tertiary-accent), var(--primary-accent));
+    border: none;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ------------------- Aside (Menú de Navegación) ------------------- */
+.aside-custom {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-nav {
+    position: sticky;
+    top: 2rem;
+}
+
+.sidebar-title {
+    color: var(--tertiary-accent);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.sidebar-link i {
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+    color: var(--text-muted);
+}
+
+.sidebar-link:hover {
+    color: var(--tertiary-accent);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--tertiary-accent);
+    transform: translateX(5px);
+    box-shadow: 0 0 10px rgba(0, 234, 211, 0.2);
+}
+
+.sidebar-link:hover i {
+    color: var(--tertiary-accent);
+}
+
+.sidebar-link.active {
+    font-weight: 600;
+    color: var(--primary-accent);
+    background: linear-gradient(90deg, rgba(108, 99, 255, 0.1), rgba(108, 99, 255, 0));
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+}
+
+.sidebar-link.active i {
+    color: var(--primary-accent);
+}
+
+/* ------------------- Main Section ------------------- */
+.main-custom {
+    background-color: var(--bg-dark);
+    transition: background-color 0.5s ease;
+    overflow-y: auto;
+}
+
+.card-post {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover sutil en la tarjeta */
+.card-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Header de la Card */
+.card-post .card-header {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.publicacion_logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 2px solid var(--tertiary-accent);
+    transition: all 0.3s ease;
+}
+
+.card-post:hover .publicacion_logo img {
+    border-color: var(--primary-accent);
+}
+
+.nombre_usuario {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.texto_publicacion {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Cuerpo de la Card */
+.post-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Footer de la Card */
+.card-post .card-footer {
+    background-color: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Botones de Acción */
+.btn-action {
+    background-color: transparent;
+    color: var(--text-muted);
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+}
+
+.btn-action:hover {
+    background-color: rgba(108, 99, 255, 0.1);
+    color: var(--primary-accent);
+    transform: scale(1.05);
+}
+.section_public{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ------------------- Footer ------------------- */
+.footer-custom {
+    background-color: var(--bg-card);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-custom .brand-logo {
+    color: var(--tertiary-accent);
+    font-size: 1.25rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-custom .brand-logo:hover {
+    color: var(--primary-accent);
+}
+
+.footer-link {
+    font-size: 0.9rem;
+    color: var(--text-muted) !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--text-color) !important;
+}
+
+.social-icon-footer {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon-footer:hover {
+    color: var(--tertiary-accent);
+    transform: translateY(-3px);
+}
+
+/* ------------------- Responsividad ------------------- */
+@media (max-width: 767.98px) {
+    .main-container {
+        margin: 0;
+        border-radius: 0;
+    }
+    .aside-custom {
+        border-right: none;
+        border-bottom: var(--border-subtle);
+    }
+}
+@media (max-width: 768px) {
+    .content-buscador {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .content_menu {
+        justify-content: center;
+    }
+    .nav-link-custom {
+        padding: 0.5rem;
+        font-size: 1.25rem;
+    }
+    nav.d-flex {
+        flex-grow: 1;
+        justify-content: space-between;
+    }
+}

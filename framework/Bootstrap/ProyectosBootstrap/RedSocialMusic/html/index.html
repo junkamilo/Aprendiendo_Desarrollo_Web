@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/framework/Bootstrap/AprendiendoBoostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/framework/Bootstrap/ProyectosBootstrap/RedSocialMusic/css/style.css">
+    <title>Red Social Music</title>
+</head>
+
+<body>
+    <div class="container-fluid g-0">
+        <!--header-->
+        <header class="row g-0 header-custom">
+            <div class="col-12 p-3 p-md-4 d-flex align-items-center justify-content-between b">
+                <!-- Logo y buscador -->
+                <div class="content-buscador">
+                    <a href="#" class="item-logo brand-logo text-decoration-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-apple-music apple-logo"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="m10.995 0 .573.001q.241 0 .483.007c.35.01.705.03 1.051.093.352.063.68.166.999.329a3.36 3.36 0 0 1 1.47 1.468c.162.32.265.648.328 1 .063.347.084.7.093 1.051q.007.241.007.483l.001.573v5.99l-.001.573q0 .241-.008.483c-.01.35-.03.704-.092 1a3.5 3.5 0 0 1-.33 1 3.36 3.36 0 0 1-1.468 1.468 3.5 3.5 0 0 1-1 .33 7 7 0 0 1-1.05.092q-.241.007-.483.008l-.573.001h-5.99l-.573-.001q-.241 0-.483-.008a7 7 0 0 1-1.052-.092 3.6 3.6 0 0 1-.998-.33 3.36 3.36 0 0 1-1.47-1.468 3.6 3.6 0 0 1-.328-1 7 7 0 0 1-.093-1.05Q.002 11.81 0 11.568V5.005l.001-.573q0-.241.007-.483c.01-.35.03-.704.093-1.05a3.6 3.6 0 0 1 .329-1A3.36 3.36 0 0 1 1.9.431 3.5 3.5 0 0 1 2.896.1 7 7 0 0 1 3.95.008Q4.19.002 4.432 0h.573zm-.107 2.518-4.756.959H6.13a.66.66 0 0 0-.296.133.5.5 0 0 0-.16.31c-.004.027-.01.08-.01.16v5.952c0 .14-.012.275-.106.39-.095.115-.21.15-.347.177l-.31.063c-.393.08-.65.133-.881.223a1.4 1.4 0 0 0-.519.333 1.25 1.25 0 0 0-.332.995c.031.297.166.582.395.792.156.142.35.25.578.296.236.047.49.031.858-.043.196-.04.38-.102.555-.205a1.4 1.4 0 0 0 .438-.405 1.5 1.5 0 0 0 .233-.55c.042-.202.052-.386.052-.588V6.347c0-.276.08-.35.302-.404.024-.005 3.954-.797 4.138-.833.257-.049.378.025.378.294v3.524c0 .14-.001.28-.096.396-.094.115-.211.15-.348.178l-.31.062c-.393.08-.649.133-.88.223a1.4 1.4 0 0 0-.52.334 1.26 1.26 0 0 0-.34.994c.03.297.174.582.404.792a1.2 1.2 0 0 0 .577.294c.237.048.49.03.858-.044.197-.04.381-.098.556-.202a1.4 1.4 0 0 0 .438-.405q.173-.252.233-.549a2.7 2.7 0 0 0 .044-.589V2.865c0-.273-.143-.443-.4-.42-.04.003-.383.064-.424.073">
+                            </path>
+                        </svg>
+                    </a>
+                    <div class="item-buscador">
+                        <form class="d-flex position-relative">
+                            <i class="bi bi-search search-icon"></i>
+                            <input class="form-control me-2 form-search" type="search"
+                                placeholder="Busca artistas, canciones..." aria-label="Search" />
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Menú de navegación principal y perfil -->
+                <div class="content_menu">
+                    <ul class="nav nav-pills me-auto d-flex align-items-center justify-content-around">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-custom">
+                                <i class="bi bi-house-door-fill"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-custom">
+                                <i class="bi bi-flag-fill"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-custom">
+                                <i class="bi bi-play-btn-fill"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-custom">
+                                <i class="bi bi-file-earmark-music-fill"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-custom">
+                                <i class="bi bi-chat-heart-fill"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--subir musica-->
+                <nav class="d-flex align-items-center">
+                    <a href="#" class="nav-link-custom text-white me-3 logo_perfil">
+                        <div class="profile-logo-frame">
+                            <img src="https://via.placeholder.com/50" class="img-fluid" alt="Perfil de usuario">
+                        </div>
+                    </a>
+                    <button class="btn btn-primary btn-cta">Subir Música</button>
+                </nav>
+            </div>
+        </header>
+
+        <div class="row g-0 content-section">
+            <!--aside-->
+            <aside class="col-12 col-md-3 aside-custom">
+                <div class="sidebar-nav">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#" class="sidebar-link">
+                                <i class="bi bi-disc-fill me-2"></i>Música Nueva
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidebar-link">
+                                <i class="bi bi-house-door-fill me-2"></i>Artista
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidebar-link">
+                                <i class="bi bi-person-fill-gear me-2"></i>Seguidos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidebar-link">
+                                <i class="bi bi-people-fill me-2"></i>Seguidores
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidebar-link">
+                                <i class="bi bi-chat-dots-fill me-2"></i>Mensajes Artistas
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!--main publicaciones-->
+            <main class="col-12 col-md-9 main-custom">
+                <section class="section_public">
+                    <div class="card card-post shadow-sm">
+                        <div class="card-header d-flex align-items-center p-3">
+                            <div class="publicacion_logo me-3">
+                                <img src="https://via.placeholder.com/50" class="img-fluid rounded-circle"
+                                    alt="Logo de usuario">
+                            </div>
+                            <div class="user-info">
+                                <h5 class="nombre_usuario mb-0 text-white">Nombre Usuario</h5>
+                                <p class="texto_publicacion mb-0">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Ad rem obcaecati, eligendi quam placeat beatae eaque cum voluptate officiis
+                                    quibusdam ipsum quis perspiciatis magnam laborum nisi porro. Ut, nemo illo?</p>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <img class="post-image" src="/img/fog-7496901_1280.jpg" alt="Card image">
+                        </div>
+                        <div class="card-footer d-flex justify-content-start p-3">
+                            <button class="btn btn-action me-2"><i class="bi bi-heart-fill me-1"></i> Like</button>
+                            <button class="btn btn-action me-2"><i class="bi bi-share-fill me-1"></i> Comparte</button>
+                            <button class="btn btn-action"><i class="bi bi-chat-fill me-1"></i> Comenta</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="p-4 p-md-5 section_public">
+                    <div class="card card-post shadow-sm">
+                        <div class="card-header d-flex align-items-center p-3">
+                            <div class="publicacion_logo me-3">
+                                <img src="https://via.placeholder.com/50" class="img-fluid rounded-circle"
+                                    alt="Logo de usuario">
+                            </div>
+                            <div class="user-info">
+                                <h5 class="nombre_usuario mb-0 text-white">Nombre Usuario</h5>
+                                <p class="texto_publicacion mb-0">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Ad rem obcaecati, eligendi quam placeat beatae eaque cum voluptate officiis
+                                    quibusdam ipsum quis perspiciatis magnam laborum nisi porro. Ut, nemo illo?</p>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <img class="post-image" src="/img/fog-7496901_1280.jpg" alt="Card image">
+                        </div>
+                        <div class="card-footer d-flex justify-content-start p-3">
+                            <button class="btn btn-action me-2"><i class="bi bi-heart-fill me-1"></i> Like</button>
+                            <button class="btn btn-action me-2"><i class="bi bi-share-fill me-1"></i> Comparte</button>
+                            <button class="btn btn-action"><i class="bi bi-chat-fill me-1"></i> Comenta</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="p-4 p-md-5 section_public">
+                    <div class="card card-post shadow-sm">
+                        <div class="card-header d-flex align-items-center p-3">
+                            <div class="publicacion_logo me-3">
+                                <img src="https://via.placeholder.com/50" class="img-fluid rounded-circle"
+                                    alt="Logo de usuario">
+                            </div>
+                            <div class="user-info">
+                                <h5 class="nombre_usuario mb-0 text-white">Nombre Usuario</h5>
+                                <p class="texto_publicacion mb-0">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Ad rem obcaecati, eligendi quam placeat beatae eaque cum voluptate officiis
+                                    quibusdam ipsum quis perspiciatis magnam laborum nisi porro. Ut, nemo illo?</p>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <img class="post-image" src="/img/fog-7496901_1280.jpg" alt="Card image">
+                        </div>
+                        <div class="card-footer d-flex justify-content-start p-3">
+                            <button class="btn btn-action me-2"><i class="bi bi-heart-fill me-1"></i> Like</button>
+                            <button class="btn btn-action me-2"><i class="bi bi-share-fill me-1"></i> Comparte</button>
+                            <button class="btn btn-action"><i class="bi bi-chat-fill me-1"></i> Comenta</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="p-4 p-md-5 section_public">
+                    <div class="card card-post shadow-sm">
+                        <div class="card-header d-flex align-items-center p-3">
+                            <div class="publicacion_logo me-3">
+                                <img src="https://via.placeholder.com/50" class="img-fluid rounded-circle"
+                                    alt="Logo de usuario">
+                            </div>
+                            <div class="user-info">
+                                <h5 class="nombre_usuario mb-0 text-white">Nombre Usuario</h5>
+                                <p class="texto_publicacion mb-0">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Ad rem obcaecati, eligendi quam placeat beatae eaque cum voluptate officiis
+                                    quibusdam ipsum quis perspiciatis magnam laborum nisi porro. Ut, nemo illo?</p>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <img class="post-image" src="/img/fog-7496901_1280.jpg" alt="Card image">
+                        </div>
+                        <div class="card-footer d-flex justify-content-start p-3">
+                            <button class="btn btn-action me-2"><i class="bi bi-heart-fill me-1"></i> Like</button>
+                            <button class="btn btn-action me-2"><i class="bi bi-share-fill me-1"></i> Comparte</button>
+                            <button class="btn btn-action"><i class="bi bi-chat-fill me-1"></i> Comenta</button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <footer class="row g-0 footer-custom">
+            <div class="col-12 p-3 p-md-4 text-white">
+                <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+                    <div class="d-flex align-items-center mb-3 mb-md-0">
+                        <a href="#" class="brand-logo text-decoration-none me-4">
+                            <i class="bi bi-music-note-beamed me-2"></i>DevMusic
+                        </a>
+                        <p class="mb-0 text-muted d-none d-md-block">&copy; 2025 DevMusic. Todos los derechos
+                            reservados.</p>
+                    </div>
+
+                    <div class="mb-3 mb-md-0">
+                        <a href="#" class="footer-link text-white me-3">Acerca de</a>
+                        <a href="#" class="footer-link text-white me-3">Términos</a>
+                        <a href="#" class="footer-link text-white">Soporte</a>
+                    </div>
+
+                    <div class="social-icons">
+                        <a href="#" class="social-icon-footer me-3"><i class="bi bi-spotify"></i></a>
+                        <a href="#" class="social-icon-footer me-3"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-icon-footer"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="d-block d-md-none text-center mt-3">
+                    <p class="mb-0 text-muted">&copy; 2025 DevMusic. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
