@@ -1,0 +1,123 @@
+/*paletas de colores*/
+
+:root {
+    --bg-dark: #121212;
+    --bg-card: #1E1E1E;
+    --border-card: #444;
+    --neon-blue: #00F0FF;
+    --neon-purple: #9000FF;
+    --text-primary: #EAEAEA;
+    --text-secondary: #AAAAAA;
+}
+
+body {
+    background-color: var(--bg-dark);
+    font-family: 'Orbitron', sans-serif;
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*contenedor principal y tarjeta*/
+
+.gamer-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.15), 0 0 40px rgba(144, 0, 255, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.gamer-card:hover {
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.3), 0 0 60px rgba(144, 0, 255, 0.2);
+}
+
+.text-neon {
+    color: var(--neon-blue);
+    text-shadow: 0 0 8px var(--neon-blue);
+}
+
+.text-secondary {
+    color: var(--text-secondary) !important;
+}
+
+/*estilos campos formulario*/
+
+.form-control, .form-select, .input-group-text {
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border-card);
+    color: var(--text-primary);
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-control::placeholder {
+    color: var(--text-secondary);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--bg-dark);
+    border-color: var(--neon-blue);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 0.25rem rgba(0, 240, 255, 0.25);
+}
+
+.input-group-text {
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: var(--neon-blue);
+    background-color: var(--bg-dark);
+}
+
+/* Estilo para los radio buttons */
+.form-check-input {
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border-card);
+}
+
+.form-check-input:checked {
+    background-color: var(--neon-blue);
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 5px var(--neon-blue);
+}
+
+.form-check-label {
+    font-weight: 500;
+}
+
+/*estilo boton de envio*/
+
+.btn-gamer {
+    padding: 15px 40px;
+    font-weight: bold;
+    color: var(--text-primary);
+    background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-gamer:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.8), 0 0 30px rgba(144, 0, 255, 0.6);
+    background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple)); /* Mantener el degradado al pasar el mouse */
+    color: var(--text-primary); /* Evita que el texto cambie de color */
+}
+
+/*mediaquerys*/
+
+@media (max-width: 576px) {
+    .gamer-card {
+        padding: 2rem !important;
+    }
+    .btn-gamer {
+        width: 100%;
+    }
+}
