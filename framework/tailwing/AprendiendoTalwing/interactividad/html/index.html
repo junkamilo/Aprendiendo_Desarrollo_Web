@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/framework/tailwing/AprendiendoTalwing/interactividad/css/style.css">
+    <title>Interactividad</title>
+</head>
+<body>
+    <!--creamos un boton con hover-->
+    <button type="button" class="bg-white border border-5 text-black py-3 px-5 m-5 rounded-lg hover:bg-orange-500 hover:text-white">Enviar</button>
+
+    <!--enfocamos el boton-->
+    <button type="button" class="bg-white border border-5 text-black py-3 px-5 m-5 rounded-lg focus:bg-green-500 focus:text-white">Enviar</button>
+
+    <!--activamos el boton el boton-->
+    <button type="button" class="bg-white border border-5 text-black py-3 px-5 m-5 rounded-lg active:bg-red-500 active:text-white">Enviar</button>
+
+    <!--actuvamos el hover del elemento padre-->
+    <a href="#" class="group block max-w-xs mx-auto rounded-lg p-6 bg-white shadow-lg space-y-3 hover:bg-orange-500 hover:text-white">
+        <h3 class="border-1 text-center px-5 py-5 rounded shadow-lg space-y-3 hover:bg-blue-300">Juan CAmilo</h3>
+        <p class="border border-1 p-5 text-justify rounded shadow-lg hover:bg-red-300 hover:text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo omnis similique at minima! Nobis repudiandae fugit obcaecati reiciendis! Doloremque sed possimus sunt inventore rerum quos obcaecati placeat minus. Possimus, culpa?</p>
+    </a>
+
+    <!--agregamos speudoclases, hacemos elececiones de colores pero se intercalan de colores con even y odd-->
+    <ul>
+        <li class="first:bg-red-500 even:bg-green-500 odd:bg-blue-200">item 1</li>
+        <li class="even:bg-green-500 odd:bg-blue-200">item 2</li>
+        <li class="even:bg-green-500 odd:bg-blue-200">item 3</li>
+        <li class="even:bg-green-500 odd:bg-blue-200">item 4</li>
+        <li class="even:bg-green-500 odd:bg-blue-200">item 5</li>
+        <li class="even:bg-green-500 odd:bg-blue-200">item 6</li>
+    </ul>
+    <br>
+
+    <!--agregamos tipos de estilos de cursores que existen-->
+    <button class="bg-green-500 px-5 py-3 border-1 text-lg-center rounded cursor-pointer">Enviar</button>
+    <button class="bg-green-500 px-5 py-3 border-1 text-lg-center rounded cursor-wait">Enviar</button>
+    <button class="bg-green-500 px-5 py-3 border-1 text-lg-center rounded cursor-text">Enviar</button>
+    <button class="bg-green-500 px-5 py-3 border-1 text-lg-center rounded cursor-move">Enviar</button>
+    <button class="bg-green-500 px-5 py-3 border-1 text-lg-center rounded cursor-help">Enviar</button>
+
+    <br>
+    <!--tipos de selecciones-->
+    <p class="select-none">Lorem ipsum dolor sit amet.</p>
+    <p class="select-text">Lorem ipsum dolor sit amet.</p>
+    <p class="select-all">Lorem ipsum dolor sit amet.</p>
+    <p class="select-auto">Lorem ipsum dolor sit amet.</p>
+
+    <!--añadimos un scroll muy suave-->
+    <div class="scroll-smooth"></div>
+
+</body>
+</html>
