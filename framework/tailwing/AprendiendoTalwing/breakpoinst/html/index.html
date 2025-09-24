@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <title>Breakpoints</title>
+</head>
+<!--estos puntos de interruccion funcionan cuando tiene el ancho minimo es que se aplica el estilo-->
+<body class="bg-black sm:bg-orange-500 md:bg-blue-500 lg:bg-green-500">
+    <h1 class="text-white border border-white w-50 text-center mx-auto my-50 rounded"></h1>
+    <script>
+      function showBrowserWidth() {
+        const width =
+          window.innerWidth ||
+          document.documentElement.clientWidth ||
+          document.body.clientWidth
+
+        document.querySelector('h1').innerHTML = `Width: ${width}`
+      }
+      window.onload = showBrowserWidth
+      window.onresize = showBrowserWidth
+    </script>
+</body>
+</html>
+<!-- Breakpoint Classes
+    sm	640px	  @media (min-width: 640px) { ... }
+    md	768px	  @media (min-width: 768px) { ... }
+    lg	1024px	@media (min-width: 1024px) { ... }
+    xl	1280px	@media (min-width: 1280px) { ... }
+    2xl	1536px	@media (min-width: 1536px) { ... }
+  -->
