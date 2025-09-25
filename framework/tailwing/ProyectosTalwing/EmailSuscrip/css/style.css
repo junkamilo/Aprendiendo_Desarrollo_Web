@@ -1,0 +1,82 @@
+@import "tailwindcss";
+:root {
+  --neon-blue: #40fcf7;
+  --neon-purple: #8a2be2;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: #44444e;
+}
+/*fuente al body principal*/
+.font-cyber {
+  font-family: "Roboto Mono", monospace;
+}
+/*estilos a la card*/
+.card-glow-border {
+  box-shadow: 0 0 15px var(--neon-blue), inset 0 0 10px rgba(64, 252, 247, 0.5);
+  border: 2px solid var(--neon-blue);
+  animation: pulse-border 5s infinite alternate;
+}
+h1{
+  color: var(--neon-blue);
+}
+
+.btn-neon-glow {
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.8), 0 0 20px rgba(138, 43, 226, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-neon-glow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--neon-purple), 0 0 30px var(--neon-purple);
+}
+
+@keyframes pulse-border {
+  0% {
+    border-color: rgba(64, 252, 247, 0.5);
+  }
+  100% {
+    border-color: var(--neon-blue);
+  }
+}
+
+/*tailwing*/
+.content-body{
+  @apply flex justify-center items-center bg-[#181825]
+}
+.content-card{
+  @apply w-[90%] max-w-4xl h-auto rounded-3xl p-2 grid grid-cols-1 lg:grid-cols-2 gap-4 bg-[#1F1F30] transform hover:scale-[1.01] transition-transform duration-500
+}
+.content-img{
+  @apply bg-gradient-to-br from-indigo-900/60 to-purple-900/60 rounded-2xl overflow-hidden shadow-2xl relative
+}
+.img{
+  @apply h-full w-full object-cover opacity-70
+}
+.content-fond{
+  @apply absolute inset-0 bg-gradient-to-b from-transparent to-[#1F1F30]/80
+}
+.content-text{
+  @apply absolute bottom-5 left-5 text-white
+}
+.text-h1{
+  @apply text-3xl lg:text-4xl font-bold tracking-widest text-shadow-lg
+}
+.text-p{
+  @apply text-xs lg:text-sm mt-1 text-gray-300
+}
+.content-information{
+  @apply p-4 lg:p-8 flex flex-col items-start justify-center gap-6
+}
+.content-primary{
+  @apply text-center lg:text-left
+}
+.content-h4{
+  @apply text-xl lg:text-3xl font-extrabold text-white tracking-wider
+}

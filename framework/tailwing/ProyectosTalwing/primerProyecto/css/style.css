@@ -1,5 +1,0 @@
-@import "tailwindcss";
-
-.div_auto {
-  @apply bg-red-500 w-80 h-80 flex justify-center items-center p-10 my-50 mx-auto rounded-2xl border-red-700 border-5 hover:bg-amber-400;
-}
