@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+}
+.grid-content {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .grid-content {
+    grid-template-columns: 1fr 2fr;
+  }
+}

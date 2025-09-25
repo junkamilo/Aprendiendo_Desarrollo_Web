@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/framework/tailwing/ProyectosTalwing/ProductoModal/css/output.css">
+    <title>Producto E-commerce</title>
+</head>
+
+<body class="bg-blue-950 min-h-screen flex justify-center items-center p-4 md:p-8">
+
+    <div class="w-full max-w-md p-2 md:p-4 rounded-3xl overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:shadow-gray-300">
+        <div class="grid-content bg-white shadow-xl rounded-2xl md:p-8 p-4 md:gap-8 gap-4 items-center">
+            <!--content img-->
+            <div
+                class="content-img bg-gray-100 p-4 md:p-8 rounded-xl flex justify-center items-center transition-transform duration-300 hover:scale-105">
+                <img src="/framework/tailwing/ProyectosTalwing/ProductoModal/img/headphone.png"
+                    alt="Producto: Auriculares Modernos" class="w-full h-auto object-contain">
+            </div>
+
+            <!--content informacion-->
+            <div class="content-informacion flex flex-col h-full justify-between gap-6">
+                <!--content name producto-->
+                <div class="content-producto flex flex-col gap-2">
+                    <p
+                        class="inline-block text-xs font-semibold uppercase tracking-wider text-white bg-blue-600 px-3 py-1 rounded-full w-fit">
+                        Envío Gratis
+                    </p>
+                    <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
+                        Audífonos Inalámbricos Pro-2024
+                    </h1>
+                    <p class="text-sm text-gray-500 max-w-prose">
+                        Disfruta de una calidad de sonido superior y cancelación de ruido activa para una experiencia
+                        auditiva inmersiva.
+                    </p>
+                </div>
+
+                <!--content price producto-->
+                <div class="content-price flex flex-col gap-2">
+                    <p class="text-2xl font-bold text-gray-900">
+                        <span class="line-through text-lg font-normal text-gray-400 mr-2">$799</span>$ 599
+                    </p>
+                    <p class="text-xs font-medium text-gray-500">
+                        ¡Oferta por tiempo limitado!
+                    </p>
+                </div>
+
+                <!--content buton-->
+                <div class="content-buttons flex flex-col gap-4 mt-auto">
+                    <!--button add-->
+                    <button
+                        class="w-full button-add bg-blue-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:bg-blue-700 transition-colors duration-300">
+                        Añadir al Carrito
+                    </button>
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                        <p class="text-sm font-medium text-gray-600">50+ unidades en stock</p>
+                    </div>
+                </div>
+
+                <!--content utilies-->
+                <div class="content-utilies flex flex-row gap-4 pt-4 border-t border-gray-200 mt-4">
+                    <div
+                        class="flex-1 flex justify-center items-center py-2 px-3 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors duration-300">
+                        <img src="/framework/tailwing/ProyectosTalwing/ProductoModal/img/heart.png" alt="Peso del producto"
+                            class="w-6 h-6 object-contain opacity-75">
+                    </div>
+                    <div
+                        class="flex-1 flex justify-center items-center py-2 px-3 rounded-lg bg-gray-100 hover:bg-red-100 transition-colors duration-300">
+                        <img src="/framework/tailwing/ProyectosTalwing/ProductoModal/img/weight.png" alt="Añadir a favoritos"
+                            class="w-6 h-6 object-cover opacity-75">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
