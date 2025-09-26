@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/framework/tailwing/ProyectosTalwing/Gallery/css/output.css">
+    <title>Gallery</title>
+</head>
+
+<body class="w-full min-h-screen flex flex-col">
+    <header class="w-full flex justify-between items-center px-6 md:px-12 py-6 border-b border-gray-200">
+        <h1 class="text-3xl md:text-4xl font-playfair font-semibold text-gray-800 tracking-wider">
+            La Galería
+        </h1>
+        <div class="hidden md:flex justify-end items-center gap-6 text-gray-600 font-medium">
+            <a href="#" class="hover:text-gray-900 transition-colors duration-200">Ilustraciones</a>
+            <a href="#" class="hover:text-gray-900 transition-colors duration-200">Fotografía</a>
+            <a href="#" class="hover:text-gray-900 transition-colors duration-200">Esculturas</a>
+            <a href="#" class="hover:text-gray-900 transition-colors duration-200">Digital</a>
+        </div>
+    </header>
+
+    <nav
+        class="w-full flex flex-col md:flex-row justify-around items-center px-6 md:px-12 py-8 bg-gray-100 border-b border-gray-200">
+        <div class="relative w-full md:w-auto md:max-w-md mb-4 md:mb-0">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none text-gray-400">
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                </svg>
+            </div>
+            <input type="search"
+                class="block w-full p-3 ps-12 text-gray-900 border border-gray-300 rounded-full bg-white focus:ring-gray-500 focus:border-gray-500 transition-all duration-200"
+                placeholder="Buscar obras de arte..." required />
+        </div>
+        <div class="flex flex-row items-center gap-4">
+            <button type="submit"
+                class="bg-gray-800 text-white font-medium rounded-full text-sm px-6 py-3 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 transition-colors duration-200">
+                Subir obra
+            </button>
+            <a href="#"
+                class="block text-gray-600 hover:text-gray-900 transition-colors duration-200 md:hidden">Menú</a>
+        </div>
+    </nav>
+
+    <main class="content-main flex-grow w-full">
+        <!-- Tarjeta de arte 1 -->
+        <div class="image-container">
+            <img src="/framework/tailwing/ProyectosTalwing/Gallery/img/image1.jpg" alt="Obra de Arte 1"
+                class="w-full h-auto object-cover">
+            <div class="image-overlay"></div>
+            <div class="image-info">
+                <h3 class="font-playfair text-xl font-semibold">Tardes en París</h3>
+                <p class="text-sm">Por Sofía Reyes</p>
+            </div>
+        </div>
+        <!-- Tarjeta de arte 2 -->
+        <div class="image-container">
+            <img src="/framework/tailwing/ProyectosTalwing/Gallery/img/image2.jpg" alt="Obra de Arte 2"
+                class="w-full h-auto object-cover">
+            <div class="image-overlay"></div>
+            <div class="image-info">
+                <h3 class="font-playfair text-xl font-semibold">Sueño de Invierno</h3>
+                <p class="text-sm">Por Juan Gómez</p>
+            </div>
+        </div>
+        <!-- Tarjeta de arte 3 -->
+        <div class="image-container">
+            <img src="/framework/tailwing/ProyectosTalwing/Gallery/img/image3.jpg" alt="Obra de Arte 3"
+                class="w-full h-auto object-cover">
+            <div class="image-overlay"></div>
+            <div class="image-info">
+                <h3 class="font-playfair text-xl font-semibold">Geometría Solar</h3>
+                <p class="text-sm">Por Elena Vidal</p>
+            </div>
+        </div>
+        <!-- Tarjeta de arte 4 -->
+        <div class="image-container">
+            <img src="/framework/tailwing/ProyectosTalwing/Gallery/img/image4.jpg" alt="Obra de Arte 4"
+                class="w-full h-auto object-cover">
+            <div class="image-overlay"></div>
+            <div class="image-info">
+                <h3 class="font-playfair text-xl font-semibold">Ritmo Urbano</h3>
+                <p class="text-sm">Por Miguel Torres</p>
+            </div>
+        </div>
+        <!-- Tarjeta de arte 5 -->
+        <div class="image-container">
+            <img src="/framework/tailwing/ProyectosTalwing/Gallery/img/image5.jpg" alt="Obra de Arte 5"
+                class="w-full h-auto object-cover">
+            <div class="image-overlay"></div>
+            <div class="image-info">
+                <h3 class="font-playfair text-xl font-semibold">El Silencio del Mar</h3>
+                <p class="text-sm">Por Carla Ruiz</p>
+            </div>
+        </div>
+        <!-- Tarjeta de arte 6 -->
+        <div class="image-container">
+            <img src="/framework/tailwing/ProyectosTalwing/Gallery/img/image6.jpg" alt="Obra de Arte 6"
+                class="w-full h-auto object-cover">
+            <div class="image-overlay"></div>
+            <div class="image-info">
+                <h3 class="font-playfair text-xl font-semibold">Luz al Atardecer</h3>
+                <p class="text-sm">Por Alejandro Castro</p>
+            </div>
+        </div>
+    </main>
+    <footer class="w-full text-center py-6 text-gray-500 text-sm">
+        &copy; 2024 La Galería. Todos los derechos reservados.
+    </footer>
+</body>
+
+</html>

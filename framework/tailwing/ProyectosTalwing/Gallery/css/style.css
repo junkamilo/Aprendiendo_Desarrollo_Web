@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8f5f2; /* Un beige suave para el ambiente de galería */
+}
+.font-playfair {
+  font-family: "Playfair Display", serif;
+}
+.content-main {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+@media (min-width: 640px) {
+  .content-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .content-main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.image-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+.image-container img {
+  transition: filter 0.3s ease-in-out, transform 0.5s ease-in-out;
+}
+.image-container:hover img {
+  filter: brightness(0.9);
+  transform: scale(1.05);
+}
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0) 50%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.image-container:hover .image-overlay {
+  opacity: 1;
+}
+.image-info {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  color: white;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.image-container:hover .image-info {
+  opacity: 1;
+  transform: translateY(0);
+}
