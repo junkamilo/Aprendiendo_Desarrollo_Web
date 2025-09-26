@@ -1,0 +1,154 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Source+Code+Pro:wght@400;600&display=swap');
+
+@layer base {
+    :root {
+        --primary-color: theme('colors.fuchsia.500');
+        --secondary-color: theme('colors.cyan.400');
+    }
+    html {
+        @apply scroll-smooth;
+    }
+    body {
+        font-family: 'Source Code Pro', monospace; /* Fuente principal para un look "tech" */
+    }
+    /* Fuente de display para títulos y logos */
+    .font-display {
+        font-family: 'Orbitron', sans-serif;
+    }
+}
+@layer components {
+    /* ----- Navegación de Cristal ----- */
+    .glass-nav {
+        @apply bg-gray-900/50 backdrop-blur-lg border-b border-fuchsia-500/20;
+    }
+    .nav-link {
+        @apply block py-2 px-3 text-gray-300 rounded-sm relative transition-colors duration-300 uppercase text-sm tracking-widest;
+    }
+    .nav-link::after {
+        @apply content-[''] absolute bottom-0 left-0 h-[2px] w-0 bg-fuchsia-500 transition-all duration-300;
+        box-shadow: 0 0 10px var(--primary-color);
+    }
+    .nav-link:hover::after { @apply w-full; }
+    .nav-link:hover { @apply text-white; }
+    .nav-link-secondary { @apply text-gray-300 hover:text-white transition-colors duration-300 text-sm font-semibold; }
+
+    /* ----- Botones con Glow ----- */
+    .btn-primary {
+        @apply relative inline-flex items-center justify-center px-6 py-3 text-sm font-bold text-white uppercase tracking-widest bg-fuchsia-600/50 border border-fuchsia-500 rounded-lg overflow-hidden transition-all duration-300;
+        box-shadow: 0 0 5px var(--primary-color), inset 0 0 5px var(--primary-color);
+    }
+    .btn-primary:hover {
+        box-shadow: 0 0 20px var(--primary-color), inset 0 0 10px var(--primary-color);
+        @apply bg-fuchsia-600/80;
+    }
+    .btn-primary span { @apply relative z-10; }
+    .btn-primary.btn-lg { @apply px-8 py-4 text-base; }
+
+    /* ----- Formulario Conversor ----- */
+    .converter-form-container {
+        @apply bg-gradient-to-r from-fuchsia-500/80 via-purple-500/80 to-cyan-500/80;
+        animation: gradient-shift 10s ease infinite;
+    }
+    .input-futuristic {
+        @apply block w-full p-4 ps-12 text-sm text-white border-0 rounded-lg bg-gray-900/80 focus:ring-2 focus:ring-fuchsia-500 placeholder-gray-500;
+    }
+    .btn-submit {
+        @apply text-white absolute end-2.5 bottom-2.5 bg-fuchsia-600 hover:bg-fuchsia-700 focus:ring-4 focus:outline-none focus:ring-fuchsia-800 font-medium rounded-lg text-sm px-6 py-2 transition-all duration-300;
+    }
+
+    /* ----- Tarjetas de Resultado ----- */
+    .result-card {
+        @apply flex flex-col md:flex-row justify-between items-center p-4 bg-gray-800/60 border border-gray-700 rounded-lg transition-all duration-300;
+    }
+    .result-card:hover {
+        @apply border-fuchsia-500/50 transform -translate-y-1;
+        box-shadow: 0 0 15px rgba(192, 72, 255, 0.2);
+    }
+    .btn-copy {
+        @apply px-5 py-2.5 text-sm font-semibold text-white bg-cyan-600 rounded-lg hover:bg-cyan-700 transition-colors duration-300;
+    }
+    .btn-copy.active {
+        @apply bg-green-500 hover:bg-green-600 cursor-not-allowed;
+    }
+
+    /* ----- Tarjetas de Características ----- */
+    .feature-card {
+        @apply relative z-10 bg-gray-800/70 p-8 rounded-lg border border-gray-700 transition-all duration-300;
+    }
+    .feature-card:hover {
+        @apply border-fuchsia-500 transform -translate-y-2;
+    }
+    .icon-wrapper {
+        @apply w-20 h-20 rounded-full bg-gray-900 border-2 border-fuchsia-500/50 flex items-center justify-center mx-auto text-fuchsia-400;
+    }
+    
+    /* ----- Links del Footer ----- */
+    .footer-link {
+        @apply me-4 md:me-6 relative transition-colors duration-300;
+    }
+    .footer-link:hover { @apply text-fuchsia-400; }
+}
+
+@layer utilities {
+    /* ----- Fondo de Grid Animado ----- */
+    .background-grid {
+        @apply fixed top-0 left-0 w-full h-full -z-10;
+        background-image: linear-gradient(rgba(192, 72, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(192, 72, 255, 0.1) 1px, transparent 1px);
+        background-size: 3rem 3rem;
+        animation: grid-pan 30s linear infinite;
+    }
+
+    /* ----- Animación de Título ----- */
+    .title-animate {
+        animation: text-flicker 4s linear infinite;
+    }
+    
+    /* ----- Contenedor de Imagen con Efecto ----- */
+    .image-container-glitch {
+        @apply relative rounded-lg overflow-hidden border-2 border-fuchsia-500/30 p-2;
+        box-shadow: 0 0 20px rgba(192, 72, 255, 0.3);
+    }
+    .image-container-glitch::after {
+        @apply content-[''] absolute top-0 left-0 w-full h-full;
+        background: repeating-linear-gradient(0deg, rgba(0,0,0,0) 0, rgba(0,0,0,0) 2px, rgba(224, 41, 168, 0.2) 3px, rgba(224, 41, 168, 0.2) 4px);
+        animation: scanlines 1.5s linear infinite;
+    }
+    
+    /* ----- Fondo de la sección CTA ----- */
+    .cta-background {
+        @apply absolute inset-0 w-full h-full bg-gray-900;
+        background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 40"%3E%3Cpath fill="%23e029a8" fill-opacity=".1" d="M0 40h80v-20h-40zM40 0h40v20h-80z"/%3E%3C/svg%3E');
+    }
+}
+
+/*keyframes*/
+@keyframes grid-pan {
+    0% { background-position: 0 0; }
+    100% { background-position: 3rem 3rem; }
+}
+
+@keyframes text-flicker {
+    0%, 19.9%, 22%, 62.9%, 64%, 64.9%, 70%, 100% {
+        opacity: 0.99;
+        text-shadow: -1px -1px 0 var(--secondary-color), 1px 1px 0 var(--primary-color), 0 0 10px var(--primary-color);
+    }
+    20%, 21.9%, 63%, 63.9%, 65%, 69.9% {
+        opacity: 0.4;
+        text-shadow: none;
+    }
+}
+
+@keyframes scanlines {
+    from { background-position: 0 0; }
+    to { background-position: 0 100%; }
+}
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.converter-form-container {
+    background-size: 200% 200%;
+}

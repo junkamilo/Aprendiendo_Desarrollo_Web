@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/ProyectosTalwing/WebEnlaces/css/output.css">
+    <title>Web Enlaces</title>
+</head>
+
+<body class="bg-gray-900 text-gray-300 font-sans antialiased overflow-x-hidden">
+    <div class="background-grid"></div>
+
+    <header class="relative w-full pt-24 pb-12 md:pt-32 md:pb-20 px-4">
+        <nav class="glass-nav fixed w-full z-50 top-0 start-0">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <svg class="h-8 w-8 text-fuchsia-500" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M2 7L12 12L22 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M12 12V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span
+                        class="self-center text-2xl font-bold whitespace-nowrap text-white tracking-wider font-display">LinkMatrix</span>
+                </a>
+                <div class="flex md:order-2 space-x-2 md:space-x-0 rtl:space-x-reverse items-center">
+                    <div class="hidden md:flex items-center gap-4">
+                        <a href="#" class="nav-link-secondary">Iniciar Sesión</a>
+                        <button type="button" class="btn-primary"><span>Registrarse</span></button>
+                    </div>
+                    <button id="menu-toggle" type="button"
+                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
+                        aria-controls="navbar-sticky" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                    <ul
+                        class="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-gray-800 md:bg-transparent">
+                        <li><a href="#" class="nav-link">Features</a></li>
+                        <li><a href="#" class="nav-link">Pricing</a></li>
+                        <li><a href="#" class="nav-link">Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+            <div class="flex flex-col items-start gap-5 text-center md:text-left">
+                <h1 class="font-display text-4xl lg:text-6xl font-extrabold text-white leading-tight title-animate">
+                    Convierte y Descarga Sin Límites
+                </h1>
+                <p class="text-lg text-gray-400 max-w-lg mx-auto md:mx-0">
+                    Pega cualquier enlace de video o audio y obtén tu archivo en segundos. Rápido, seguro y con la mejor
+                    calidad.
+                </p>
+                <button type="button" class="btn-primary btn-lg mt-4">
+                    <span>Empezar Ahora</span>
+                </button>
+            </div>
+            <div class="w-full h-auto flex justify-center items-center">
+                <div class="image-container-glitch">
+                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Setup de computadora" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10 mt-20">
+        <section class="w-full px-4 pb-20 md:-mt-24">
+            <div class="max-w-4xl mx-auto">
+                <form class="converter-form-container p-2 rounded-xl">
+                    <div class="relative w-full">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none">
+                            <svg class="w-5 h-5 text-fuchsia-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12.006 2h-.012a6.012 6.012 0 0 0-5.992 6.012v.006A6.012 6.012 0 0 0 12 14.022h.012A6.012 6.012 0 0 0 18.012 8.012v-.006A6.012 6.012 0 0 0 12.006 2Z" />
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M7.994 14h.012a6.012 6.012 0 0 0 5.992-6.012v-.006A6.012 6.012 0 0 0 8 1.988h-.012A6.012 6.012 0 0 0 1.988 8.001v.006A6.012 6.012 0 0 0 7.994 14Z" />
+                            </svg>
+                        </div>
+                        <input type="search" class="input-futuristic"
+                            placeholder="Pega tu enlace aquí (YouTube, Vimeo, etc...)" required />
+                        <button type="submit" class="btn-submit">Convertir</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="max-w-4xl mx-auto mt-10 flex flex-col gap-4">
+                <div class="result-card">
+                    <p class="truncate text-gray-300">https://www.youtube.com/watch?v=long-example-video-id-goes-here
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <p class="text-fuchsia-400 font-semibold truncate">your-link.io/xyz123</p>
+                        <button type="button" class="btn-copy"><span>Copiar</span></button>
+                    </div>
+                </div>
+                <div class="result-card">
+                    <p class="truncate text-gray-300">https://vimeo.com/another-long-video-id-for-demonstration</p>
+                    <div class="flex items-center gap-4">
+                        <p class="text-fuchsia-400 font-semibold truncate">your-link.io/abc456</p>
+                        <button type="button" class="btn-copy active"><span>Copiado!</span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 px-4 text-center">
+            <div class="max-w-xl mx-auto mb-12">
+                <h2 class="font-display text-4xl font-bold text-white">Estadísticas Avanzadas</h2>
+                <p class="mt-4 text-gray-400">Rastrea cómo funcionan tus enlaces. Un panel de control completo para
+                    dominar tus conversiones y compartidos.</p>
+            </div>
+
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 relative items-start">
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-fuchsia-500/30 -translate-y-1/2">
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-wrapper">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mt-6 mb-2 font-display">Reconocimiento</h3>
+                    <p class="text-gray-400">Aumenta el reconocimiento de tu marca con cada clic. Los enlaces genéricos
+                        no marcan la diferencia.</p>
+                </div>
+                <div class="feature-card md:transform md:translate-y-10">
+                    <div class="icon-wrapper">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mt-6 mb-2 font-display">Registros Detallados</h3>
+                    <p class="text-gray-400">Obtén información sobre quién hace clic en tus enlaces. Conocer a tu
+                        audiencia te da el poder.</p>
+                </div>
+                <div class="feature-card md:transform md:translate-y-20">
+                    <div class="icon-wrapper">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mt-6 mb-2 font-display">Personalizable</h3>
+                    <p class="text-gray-400">Mejora el conocimiento de la marca y la confianza en el contenido a través
+                        de enlaces personalizables.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 relative overflow-hidden">
+            <div class="cta-background"></div>
+            <div class="relative z-10 text-center px-4">
+                <h2 class="font-display text-4xl font-bold text-white">Potencia tus Enlaces Hoy</h2>
+                <div class="mt-8">
+                    <button type="button" class="btn-primary btn-lg"><span>Comienza Gratis</span></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900/50">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <svg class="h-8 w-8 text-fuchsia-500" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M2 7L12 12L22 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M12 12V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span
+                        class="self-center text-2xl font-bold whitespace-nowrap text-white font-display">LinkMatrix</span>
+                </a>
+                <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-400 sm:mb-0">
+                    <li><a href="#" class="footer-link">About</a></li>
+                    <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                    <li><a href="#" class="footer-link">Licensing</a></li>
+                    <li><a href="#" class="footer-link">Contact</a></li>
+                </ul>
+            </div>
+            <hr class="my-6 border-gray-700 sm:mx-auto lg:my-8" />
+            <span class="block text-sm text-gray-500 sm:text-center">© 2025 <a href="#"
+                    class="hover:text-fuchsia-400 transition-colors">LinkMatrix™</a>. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
