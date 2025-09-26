@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
+
+/* Variables CSS para colores neon y branding */
+:root {
+  --color-primary: #ff47c0; /* Rosa Neón Vibrante */
+  --color-secondary: #00e0ff; /* Azul Eléctrico */
+  --color-dark: #121212; /* Fondo Oscuro Profundo */
+  --color-light: #f0f0f0;
+}
+@layer base {
+  .content-body {
+    /* Se usa una fuente moderna que transmite arte y energía */
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    /* Estilo de texto neón para títulos */
+    text-shadow: 0 0 5px var(--color-primary), 0 0 10px var(--color-primary);
+  }
+}
+
+@layer components {
+  /* Estilo de Botón Principal - Efecto Neón */
+  .btn-neon {
+    @apply transition duration-300 ease-in-out font-extrabold text-white uppercase tracking-wider shadow-lg;
+    background: linear-gradient(45deg, var(--color-primary), #ff007b);
+    border: 2px solid var(--color-secondary);
+    box-shadow: 0 0 5px var(--color-primary), 0 0 20px var(--color-primary);
+  }
+  .btn-neon:hover {
+    @apply scale-105;
+    background: linear-gradient(45deg, #ff007b, var(--color-primary));
+    box-shadow: 0 0 10px var(--color-secondary), 0 0 30px var(--color-secondary);
+  }
+
+  /* Estilo de Card de Artista - Efecto 3D / Exclusivo */
+  .card-artist {
+    @apply bg-gray-900 border-2 border-transparent transition duration-500 ease-in-out overflow-hidden relative;
+    /* Degradado sutil de fondo oscuro a semi-transparente */
+    background: radial-gradient(
+      circle at top left,
+      rgba(40, 40, 40, 0.5),
+      var(--color-dark)
+    );
+    /* Borde con degradado que simula el neón */
+    border-image: linear-gradient(
+        45deg,
+        var(--color-secondary),
+        var(--color-primary)
+      )
+      1;
+    border-width: 2px;
+  }
+  .card-artist:hover {
+    @apply transform -translate-y-1 shadow-2xl;
+    box-shadow: 0 10px 30px rgba(0, 224, 255, 0.4),
+      0 0 50px rgba(255, 71, 192, 0.3);
+  }
+}
+
+/* Estructura específica del HTML original - Manteniendo la responsividad con Tailwind */
+.content-img-descripcion {
+  /* Flex en móvil, Grid en pantallas medianas */
+  @apply flex flex-col md:grid md:grid-cols-2 md:gap-8 items-center;
+}
+
+.content-licencia {
+  /* Grid de 1 columna en móvil, 3 en desktop */
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.content-patrocinadores {
+  /* Grid responsivo para logos de patrocinadores */
+  @apply grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 p-4 md:p-8;
+}
