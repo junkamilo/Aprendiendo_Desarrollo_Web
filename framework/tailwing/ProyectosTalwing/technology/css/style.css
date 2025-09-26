@@ -1,0 +1,20 @@
+@import "tailwindcss";
+.content-body{
+    width: 100dvw;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px 2fr 1rem;
+}
+.content-img{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,10rem);
+    grid-template-rows: repeat(2,20rem);
+    justify-content: center;
+    gap: 1rem;
+}
+.content-img > div > img:hover { 
+    background-color: transparent;
+    border: 1px solid b;
+}
