@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+/* Importar tipografía moderna de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+@layer base {
+    /* Fuente principal para un look de UI moderno */
+    body, html {
+        font-family: 'Inter', sans-serif;
+    }
+    /* Clase específica para títulos con más peso */
+    .font-display {
+        font-family: 'Inter', sans-serif;
+        font-weight: 800;
+    }
+}
+
+@layer components {
+    /* --- Componentes de Navegación --- */
+    .nav-link {
+        @apply block py-2 px-3 text-slate-700 dark:text-slate-300 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 md:hover:bg-transparent md:dark:hover:bg-transparent md:p-0 relative transition-colors;
+    }
+    .nav-link.active {
+        @apply text-blue-600 dark:text-blue-500;
+    }
+    .nav-link:not(.active):hover {
+        @apply text-slate-900 dark:text-white;
+    }
+    .nav-link::after {
+        @apply content-[''] absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-0 bg-blue-600 transition-all duration-300;
+    }
+    .nav-link.active::after {
+        @apply w-full;
+    }
+
+    /* --- Botón Primario (Call to Action) --- */
+    .btn-primary {
+        @apply inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-blue-600 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 transition-all duration-300 shadow-lg hover:shadow-blue-500/40 transform hover:-translate-y-1;
+    }
+
+    /* --- Contenedor de Imagen de la App --- */
+    .app-image-container {
+        @apply rounded-2xl overflow-hidden shadow-2xl dark:shadow-blue-900/20 transform rotate-y-15 hover:rotate-y-0 transition-transform duration-500;
+    }
+
+    /* --- Tarjetas de Características --- */
+    .feature-card {
+        @apply bg-white dark:bg-slate-800/50 p-6 rounded-2xl border border-transparent hover:border-blue-500/50 dark:hover:border-blue-500 transition-all duration-300 shadow-md hover:shadow-xl transform hover:-translate-y-2;
+    }
+    .icon-wrapper {
+        @apply w-16 h-16 rounded-xl flex items-center justify-center mb-5;
+    }
+    .card-title {
+        @apply text-xl font-bold text-slate-900 dark:text-white mb-2;
+    }
+    .card-text {
+        @apply text-slate-600 dark:text-slate-400;
+    }
+    
+    /* --- Tarjetas de Testimonios --- */
+    .testimonial-card {
+        @apply bg-slate-100/50 dark:bg-slate-800/50 p-8 rounded-2xl relative text-center;
+    }
+    .testimonial-card::before {
+        content: '“';
+        @apply absolute top-0 left-4 text-7xl text-blue-500/10 dark:text-blue-500/20 font-serif z-0;
+    }
+    
+    /* --- Links del Footer --- */
+    .footer-link {
+        @apply me-4 md:me-6 hover:text-blue-600 dark:hover:text-blue-500 transition-colors duration-300;
+    }
+}

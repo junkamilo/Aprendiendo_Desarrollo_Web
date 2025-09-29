@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/ProyectosTalwing/ThemeDarkWeb/css/output.css">
+    <title>DarkWeb</title>
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-300 transition-colors duration-300">
+
+    <header class="relative overflow-hidden">
+        <nav
+            class="fixed top-0 left-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <svg class="h-8 w-8 text-blue-600" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span
+                        class="self-center text-2xl font-bold whitespace-nowrap dark:text-white font-display">TaskFlow</span>
+                </a>
+
+                <div class="flex items-center gap-2">
+                    <button id="theme-toggle" type="button"
+                        class="flex items-center w-9 h-9 justify-center text-sm text-gray-500 dark:text-gray-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm-.707 7.072l.707-.707a1 1 0 10-1.414-1.414l-.707.707a1 1 0 001.414 1.414zM3 11a1 1 0 100-2H2a1 1 0 100 2h1z"
+                                fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="sr-only">Toggle dark mode</span>
+                    </button>
+                    <button id="menu-toggle-button" type="button"
+                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        aria-controls="navbar-default" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                    <ul
+                        class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+                        <li><a href="#" class="nav-link active" aria-current="page">Inicio</a></li>
+                        <li><a href="#" class="nav-link">Características</a></li>
+                        <li><a href="#" class="nav-link">Testimonios</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="w-full pt-32 pb-20 px-4">
+            <div class="max-w-screen-xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h1
+                        class="text-4xl lg:text-6xl font-extrabold font-display text-slate-900 dark:text-white leading-tight">
+                        Organiza tu día. <span class="text-blue-600">Conquista tus metas.</span>
+                    </h1>
+                    <p class="mt-6 text-lg text-slate-600 dark:text-slate-400 max-w-xl mx-auto md:mx-0">
+                        TaskFlow es la app de checklist minimalista y poderosa que necesitas para transformar tus
+                        rutinas, gestionar tareas y aumentar tu productividad.
+                    </p>
+                    <div class="mt-8 flex justify-center md:justify-start">
+                        <a href="#" class="btn-primary">
+                            <svg class="w-6 h-6 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M19.387 5.689l-3.953-3.953A3.493 3.493 0 0012.946 1a3.493 3.493 0 00-2.488.736L3.39 8.799a3.493 3.493 0 00-.736 2.488 3.493 3.493 0 00.736 2.488l7.067 7.067a3.493 3.493 0 002.488.736 3.493 3.493 0 002.488-1.031l6.234-6.234a3.493 3.493 0 001.031-2.488 3.493 3.493 0 00-1.031-2.488zM8.293 9.707a1 1 0 11-1.414-1.414 1 1 0 011.414 1.414z" />
+                            </svg>
+                            Descargar en Play Store
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full flex justify-center">
+                    <div class="app-image-container">
+                        <img src="https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            class="w-full h-full object-cover" alt="Persona organizando tareas en un escritorio">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-20 px-4 bg-slate-100 dark:bg-slate-950/50">
+            <div class="max-w-screen-xl mx-auto text-center">
+                <h2 class="text-3xl font-bold font-display text-slate-900 dark:text-white">Todo lo que necesitas para
+                    ser más productivo</h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                    Diseñada para ser intuitiva y potente, TaskFlow te ayuda a enfocarte en lo que realmente importa.
+                </p>
+                <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 text-left">
+                    <div class="feature-card">
+                        <div class="icon-wrapper bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400"><svg
+                                class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4">
+                                </path>
+                            </svg></div>
+                        <h3 class="card-title">Listas Inteligentes</h3>
+                        <p class="card-text">Crea checklists para tus rutinas diarias, proyectos o metas. Organízalas
+                            por categorías y prioridades.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-wrapper bg-green-100 dark:bg-green-900/50 text-green-600 dark:text-green-400">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg></div>
+                        <h3 class="card-title">Recordatorios</h3>
+                        <p class="card-text">Nunca olvides una tarea importante. Configura recordatorios y
+                            notificaciones personalizadas.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div
+                            class="icon-wrapper bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                </path>
+                            </svg></div>
+                        <h3 class="card-title">Seguimiento de Hábitos</h3>
+                        <p class="card-text">Visualiza tu progreso con estadísticas claras y motivadoras. Mantén la
+                            consistencia y alcanza tus objetivos.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div
+                            class="icon-wrapper bg-yellow-100 dark:bg-yellow-900/50 text-yellow-600 dark:text-yellow-400">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m0 18a9 9 0 009-9m-9 9a9 9 0 00-9-9">
+                                </path>
+                            </svg></div>
+                        <h3 class="card-title">Sincronización Total</h3>
+                        <p class="card-text">Accede a tus listas desde cualquier dispositivo. Tu progreso se guarda y
+                            sincroniza en la nube.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 px-4">
+            <div class="max-w-screen-xl mx-auto text-center">
+                <h2 class="text-3xl font-bold font-display text-slate-900 dark:text-white">Amado por miles de usuarios
+                    organizados</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    <div class="testimonial-card">
+                        <p class="text-slate-600 dark:text-slate-400">“TaskFlow ha cambiado mi rutina matutina. Es
+                            simple, visualmente agradable y me mantiene enfocado. ¡La mejor app de checklist que he
+                            probado!”</p>
+                        <div class="flex items-center justify-center mt-6">
+                            <img class="w-12 h-12 rounded-full object-cover"
+                                src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Foto de usuario">
+                            <div class="ml-4 text-left">
+                                <p class="font-semibold text-slate-900 dark:text-white">Ana Torres</p>
+                                <p class="text-sm text-slate-500 dark:text-slate-400">Diseñadora UX</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="text-slate-600 dark:text-slate-400">“Como estudiante, gestionar mis tareas era un
+                            caos. Ahora, con TaskFlow, tengo todo bajo control. Los recordatorios son una salvación.”
+                        </p>
+                        <div class="flex items-center justify-center mt-6">
+                            <img class="w-12 h-12 rounded-full object-cover"
+                                src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Foto de usuario">
+                            <div class="ml-4 text-left">
+                                <p class="font-semibold text-slate-900 dark:text-white">Carlos Vega</p>
+                                <p class="text-sm text-slate-500 dark:text-slate-400">Estudiante Universitario</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="text-slate-600 dark:text-slate-400">“Me encanta lo minimalista que es. Sin
+                            distracciones, solo mis tareas y yo. La función de seguimiento de hábitos es increíblemente
+                            motivadora.”</p>
+                        <div class="flex items-center justify-center mt-6">
+                            <img class="w-12 h-12 rounded-full object-cover"
+                                src="https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Foto de usuario">
+                            <div class="ml-4 text-left">
+                                <p class="font-semibold text-slate-900 dark:text-white">Laura Méndez</p>
+                                <p class="text-sm text-slate-500 dark:text-slate-400">Emprendedora</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-100 dark:bg-slate-950/50">
+        <div class="max-w-4xl mx-auto px-4 py-16 text-center">
+            <h3 class="text-3xl font-extrabold font-display text-slate-900 dark:text-white">Comienza a organizar tu vida
+                hoy</h3>
+            <p class="mt-4 text-slate-600 dark:text-slate-400">
+                Descarga TaskFlow gratis en la Play Store y únete a una comunidad de personas que toman el control de su
+                tiempo y sus metas.
+            </p>
+            <div class="mt-8">
+                <a href="#" class="btn-primary">
+                    <svg class="w-6 h-6 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M19.387 5.689l-3.953-3.953A3.493 3.493 0 0012.946 1a3.493 3.493 0 00-2.488.736L3.39 8.799a3.493 3.493 0 00-.736 2.488 3.493 3.493 0 00.736 2.488l7.067 7.067a3.493 3.493 0 002.488.736 3.493 3.493 0 002.488-1.031l6.234-6.234a3.493 3.493 0 001.031-2.488 3.493 3.493 0 00-1.031-2.488zM8.293 9.707a1 1 0 11-1.414-1.414 1 1 0 011.414 1.414z" />
+                    </svg>
+                    ¡Es Gratis!
+                </a>
+            </div>
+        </div>
+        <div class="border-t border-slate-200 dark:border-slate-800">
+            <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+                <div class="sm:flex sm:items-center sm:justify-between">
+                    <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                        <svg class="h-8 w-8 text-blue-600" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span
+                            class="self-center text-2xl font-bold whitespace-nowrap dark:text-white font-display">TaskFlow</span>
+                    </a>
+                    <ul
+                        class="flex flex-wrap items-center mb-6 text-sm font-medium text-slate-500 sm:mb-0 dark:text-slate-400">
+                        <li><a href="#" class="footer-link">Sobre Nosotros</a></li>
+                        <li><a href="#" class="footer-link">Política de Privacidad</a></li>
+                        <li><a href="#" class="footer-link">Contacto</a></li>
+                    </ul>
+                </div>
+                <hr class="my-6 border-slate-200 sm:mx-auto dark:border-slate-700 lg:my-8" />
+                <span class="block text-sm text-slate-500 sm:text-center dark:text-slate-400">© 2025 <a href="#"
+                        class="hover:underline">TaskFlow™</a>. Todos los derechos reservados.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/ProyectosTalwing/ThemeDarkWeb/js/main.js"></script>
+</body>
+
+</html>
