@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="/Dom/css/output.css">
     <title>Agregar Y Eliminar</title>
 </head>
-<body class="flex justify-center items-center flex-col w-full h-full">
-    <div class="border-1 border-black w-[90%]">1</div>
-    <div class="border-1 border-black w-[90%]">2</div>
-    <script src="/Dom/js/AgregarEliminar.js"></>
+
+<body class="flex justify-center items-center flex-col w-full gap-5 p-5">
+    <!--contenedor principal de los productos-->
+    <div class="content-productos" id="content-productos"></div>
+    <div class="content-favoritos" id="content-favoritos"></div>
+
+    <script src="/Dom/js/AgregarEliminar.js"></script>
 </body>
+
 </html>

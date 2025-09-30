@@ -1,0 +1,123 @@
+@import "tailwindcss";
+* {
+  box-sizing: border-box;
+}
+
+/* Definimos variables de color para reutilizar en el diseño */
+:root {
+  --glow-color-1: #00f2ff;
+  --glow-color-2: #8a2be2;
+  --glow-color-3: #ff00c1;
+}
+
+@layer components {
+  .content-card {
+    @apply bg-[#1a1a2e] text-white p-6 rounded-2xl border border-transparent transition-all duration-300 relative overflow-hidden w-full max-w-sm;
+    font-family: "Roboto", sans-serif;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+  }
+  .content-productos {
+    @apply w-[90%] grid sm:grid-cols-1 md:grid-cols-5 gap-5;
+  }
+  .content-favoritos {
+    @apply w-[90%] grid sm:grid-cols-1 md:grid-cols-5 gap-5;
+  }
+  .content-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: inherit;
+    background: linear-gradient(
+      145deg,
+      var(--glow-color-1),
+      var(--glow-color-2),
+      var(--glow-color-3)
+    );
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0.6;
+  }
+  .content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 242, 255, 0.3);
+  }
+
+  .content-card:hover::before {
+    opacity: 1;
+  }
+
+  .content-img {
+    @apply w-[150px] h-[150px] mx-auto mb-4 transition-transform duration-300 ease-in-out overflow-hidden rounded-full;
+  }
+
+  .content-card:hover .content-img {
+    transform: scale(1.1);
+  }
+
+  .img-logo {
+    @apply w-full h-full object-cover;
+  }
+
+  /* Estilos para la tipografía */
+  .name-product{
+    @apply text-2xl text-center font-bold mb-2;
+    font-family: "Orbitron", sans-serif; 
+    color: var(--glow-color-1);
+    text-shadow: 0 0 8px var(--glow-color-1);
+  }
+
+  .description-product{
+    @apply text-gray-400 text-sm text-center mb-4 min-h-[80px];
+  }
+
+  .content-card .price {
+    @apply text-3xl font-bold text-center mb-6;
+    font-family: "Orbitron", sans-serif;
+    color: #00ff9d;
+    text-shadow: 0 0 10px rgba(0, 255, 157, 0.7);
+  }
+
+  .button-container {
+    @apply text-center;
+  }
+
+  /* Estilo del botón de "Agregar al Carrito" */
+  .add-to-cart-btn {
+    @apply bg-transparent border-2 rounded-full inline-flex items-center justify-center py-3 px-7 text-center text-base font-medium text-white transition-all duration-300 relative overflow-hidden;
+    border-color: var(--glow-color-3);
+    box-shadow: 0 0 15px rgba(255, 0, 193, 0.5);
+  }
+
+  .add-to-cart-btn:hover {
+    background-color: var(--glow-color-3);
+    color: #1a1a2e;
+    box-shadow: 0 0 25px rgba(255, 0, 193, 0.8);
+    transform: scale(1.05); /* Leve animación de escala */
+  }
+
+  /* Efecto de luz en el botón */
+  .add-to-cart-btn::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 70%
+    );
+    transform: rotate(0deg);
+    transition: transform 0.5s ease-out;
+  }
+
+  .add-to-cart-btn:hover::after {
+    transform: rotate(360deg); /* Animación de luz al pasar el cursor */
+  }
+}
