@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+/* Definimos variables de color para el tema neón */
+:root {
+  --glow-color-1: #00f2ff;
+  --glow-color-2: #ff00c1;
+  --bg-dark: #0d0d1a;
+  --surface-color: rgba(26, 26, 46, 0.6); 
+}
+
+/* Definimos una animación de "lanzamiento" para los dados */
+@keyframes roll-animation {
+  0% {
+    transform: rotate(0deg) scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Creamos una clase de utilidad para aplicar la animación */
+.rolling {
+  animation: roll-animation 0.6s ease-out;
+}
+
+@layer components {
+  .content-body {
+    @apply w-dvw min-h-dvh flex justify-center items-center flex-col p-4;
+    background-color: var(--bg-dark);
+    /* Fondo con gradiente sutil para dar profundidad */
+    background-image: radial-gradient(
+        circle at top right,
+        rgba(138, 43, 226, 0.2),
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at bottom left,
+        rgba(0, 242, 255, 0.2),
+        transparent 40%
+      );
+    font-family: "Orbitron", sans-serif;
+  }
+
+  .content-result {
+    @apply w-full max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-8 items-center;
+  }
+
+  .content-titulo {
+    @apply w-full h-full;
+  }
+
+  .content-dado {
+    @apply flex justify-center items-center flex-col p-5;
+  }
+
+  .dado {
+    @apply w-full max-w-xs md:max-w-md h-auto aspect-square rounded-3xl grid grid-cols-2 grid-rows-3 p-6 gap-4 relative transition-all duration-300 ease-out;
+    background-color: var(--surface-color);
+    backdrop-filter: blur(10px); /* Efecto de vidrio esmerilado */
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px var(--glow-color-1), 0 0 30px var(--glow-color-1);
+  }
+
+  .dado:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 25px var(--glow-color-1), 0 0 50px var(--glow-color-1);
+  }
+
+  /* El segundo dado usa el segundo color de neón */
+  .content-dado:last-child .dado {
+    box-shadow: 0 0 15px var(--glow-color-2), 0 0 30px var(--glow-color-2);
+  }
+  .content-dado:last-child .dado:hover {
+    box-shadow: 0 0 25px var(--glow-color-2), 0 0 50px var(--glow-color-2);
+  }
+
+  .result {
+    @apply w-12 h-12 md:w-16 md:h-16 self-center justify-self-center rounded-full transition-all duration-300;
+    /* Diseño del punto del dado: orbe brillante */
+    background: radial-gradient(circle, white, var(--glow-color-1) 60%);
+    box-shadow: 0 0 10px white, 0 0 20px var(--glow-color-1),
+      inset 0 0 5px white;
+  }
+
+  /* Los puntos del segundo dado usan el segundo color de neón */
+  .content-dado:last-child .result {
+    background: radial-gradient(circle, white, var(--glow-color-2) 60%);
+    box-shadow: 0 0 10px white, 0 0 20px var(--glow-color-2),
+      inset 0 0 5px white;
+  }
+
+  .content-vs {
+    @apply text-5xl md:text-8xl font-black w-full h-full flex justify-center items-center text-center transition-all duration-300;
+    /* Texto con gradiente y sombra para efecto de neón */
+    background: linear-gradient(
+      90deg,
+      var(--glow-color-1),
+      white,
+      var(--glow-color-2)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+}
