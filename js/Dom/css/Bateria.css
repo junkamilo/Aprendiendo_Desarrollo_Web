@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* Definimos variables de color para un tema coherente */
+:root {
+  --glow-color: #f97316; /* Naranja neón */
+}
+
+@layer components {
+  .content-body {
+    @apply bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen p-4 overflow-hidden;
+    /* Degradado de fondo sutil y animado */
+    background-image: radial-gradient(circle at top left, #4c1d95, transparent 30%), 
+                      radial-gradient(circle at bottom right, #be185d, transparent 30%);
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  /* Clase que se añadirá con JS para un efecto de pulso global */
+  .body-pulse {
+    @apply bg-gray-800;
+  }
+    
+  .titulo {
+    @apply text-5xl md:text-7xl font-black mb-8 uppercase tracking-widest;
+    /* Efecto de texto con degradado */
+    @apply bg-gradient-to-r from-orange-400 to-rose-500 bg-clip-text text-transparent;
+    /* Sombra para efecto de brillo */
+    text-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
+  }
+    
+  .content-cards {
+    @apply flex flex-wrap justify-center items-center gap-6;
+  }
+
+  .content-img {
+    @apply relative w-[150px] h-[150px] md:w-[200px] md:h-[200px] rounded-2xl cursor-pointer transition-all duration-300 ease-in-out;
+    /* Efecto de vidrio esmerilado */
+    background: rgba(31, 41, 55, 0.3);
+    backdrop-filter: blur(10px);
+    border: 2px solid transparent; /* Borde inicial transparente */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transform-style: preserve-3d; /* Prepara para transformaciones 3D */
+  }
+
+  /* Efecto hover: el pad se levanta y su borde se ilumina */
+  .content-img:hover {
+    transform: translateY(-10px) scale(1.05);
+    border-color: var(--glow-color);
+    box-shadow: 0 0 20px var(--glow-color);
+  }
+    
+  .img-fluid {
+    @apply w-full h-full object-contain p-6 md:p-8 filter grayscale brightness-75 transition-all duration-300;
+  }
+  
+  .content-img:hover .img-fluid {
+    @apply grayscale-0 brightness-100;
+  }
+
+  .key-label {
+    @apply absolute bottom-2 right-4 text-3xl md:text-4xl font-black text-white/40 transition-colors duration-300;
+  }
+  
+  .content-img:hover .key-label {
+    @apply text-white;
+  }
+
+  /* Clase para la animación al presionar (shockwave) */
+  .active {
+    animation: shockwave 0.4s ease-out;
+  }
+}
+
+/* Animación de onda expansiva al presionar la tecla */
+@keyframes shockwave {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 20px var(--glow-color);
+    border-color: var(--glow-color);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px var(--glow-color), 0 0 60px var(--glow-color);
+    border-color: white;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px var(--glow-color);
+    border-color: var(--glow-color);
+  }
+}
